@@ -1,35 +1,49 @@
-var div_cajita= document.getElementById('cajita')
-var es_presionada=false  
-var offset=[0, 0]
+// Tipado dinamico
+var a = 100
+console.log( a )
 
-div_cajita.addEventListener('mousedown', function(valor){
- es_presionada=true
+a = 10.9
+console.log( a )
 
- offset=[div_cajita.offsetLeft - valor.clientX, div_cajita.offsetTop - valor.clientY ]
+a = 'Hola mundo'
+console.log( a )
 
-/**console.log('X: $ {valor.clientX}')
-console.log('Y: $ {valor.clientY}')
-/***otra forma */
-/**console.log('Div top:'+ div_cajita.offsetTop)
-console.log('Div left:'+ div_cajita.offsetLeft)**/
+a = true
+console.log( a )
 
- console.log(es_presionada)
-}, true)
+// Tipos de datos
+var a = 10
+var b = 10.5
 
-div_cajita.addEventListener('mouseup', function(valor){
-   es_presionada=false
-   
-   console.log(es_presionada)
-  }, true)
+console.log( typeof a )
+console.log( typeof b )
 
-  div_cajita.addEventListener('mousemove', function(valor){
-   valor.preventDefault()
-   if(es_presionada){
-      div_cajita.style.left=(valor.clientX + offset[0])+'px'
-      div_cajita.style.top=(valor.clientY + offset[1])+'px'
-   }
+var c = true
+console.log( typeof c )
 
-  }, true)
+var d = 'Hola mundo'
+console.log( typeof d )
 
-  
- 
+var e
+console.log( typeof e )
+
+var f = null
+console.log( typeof f )
+console.log( f )
+
+// Objetos
+
+var persona = {
+    nombre: 'Melanie',
+    apellido: 'Saltos',
+    ciudad: 'Guayaquil'
+}
+
+console.log( typeof persona )
+console.log( persona )
+
+persona.nombre = 'Melanie Solange'
+console.log( persona )
+
+
+
